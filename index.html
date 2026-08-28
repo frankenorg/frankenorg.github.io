@@ -294,6 +294,58 @@
   .platform.static{cursor:default;}
   .platform.static:hover{transform:none;border-color:var(--line);}
 
+  /* ---- latest episodes ---- */
+  .episodes-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:.9rem;
+  }
+  @media(max-width:520px){ .episodes-grid{grid-template-columns:1fr;} }
+  .episode-card{
+    display:flex;
+    flex-direction:column;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+    text-decoration:none;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  .episode-card:hover, .episode-card:focus-visible{
+    border-color:var(--term-green-dim);
+    transform:translateY(-2px);
+  }
+  .episode-thumb{
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    display:block;
+    background:var(--lab-black-2);
+    border-bottom:1px solid var(--line);
+  }
+  .episode-info{padding:.75rem .85rem .9rem;}
+  .episode-title{
+    font-size:.82rem;
+    color:var(--cream);
+    line-height:1.5;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+  }
+  .episode-date{
+    margin-top:.4rem;
+    font-size:.7rem;
+    color:var(--cream-dim);
+  }
+  .episodes-status{
+    font-size:.82rem;
+    color:var(--cream-dim);
+    line-height:1.7;
+  }
+  .episodes-status a{color:var(--volt);text-decoration:underline;text-underline-offset:3px;}
+  .episodes-status.dim{grid-column:1/-1;}
+
   .search-note{
     margin-top:.9rem;
     font-size:.78rem;
@@ -361,7 +413,7 @@
   </div>
 
   <div class="stamp-zone">
-    <p class="stamp-sub"><b>Good things take some time</b> and so does untangling fifteen years of Apex triggers. We're bolting this website together. Stay tuned.</p>
+    <p class="stamp-sub"><b>Good things take some time</b> and so does untangling fifteeen years of Apex triggers. We're bolting this website together. Stay tuned.</p>
 
     <a class="linkedin-cta" href="https://www.linkedin.com/company/frankenorg" target="_blank" rel="noopener">
       <span class="li-badge" aria-hidden="true">in</span>
@@ -382,6 +434,16 @@
       <div>uptime: unknown &nbsp;·&nbsp; last documented: never &nbsp;·&nbsp; vibes: stable-ish</div>
     </div>
   </div>
+
+  <div class="stitch" role="presentation"></div>
+
+  <section>
+    <div class="section-eyebrow">// latest drop</div>
+    <h2>Recent episodes</h2>
+    <div id="episodes-grid" class="episodes-grid">
+      <p class="episodes-status dim">Loading latest episodes…</p>
+    </div>
+  </section>
 
   <div class="stitch" role="presentation"></div>
 
@@ -422,5 +484,51 @@
   </footer>
 
 </div>
+
+<script>
+(async function loadEpisodes(){
+  const grid = document.getElementById('episodes-grid');
+  const playlistUrl = 'https://www.youtube.com/playlist?list=PLMADD-VEXGwY';
+
+  function escapeHtml(str){
+    const div = document.createElement('div');
+    div.textContent = str || '';
+    return div.innerHTML;
+  }
+  function formatDate(iso){
+    if(!iso) return '';
+    const d = new Date(iso);
+    if(isNaN(d)) return '';
+    return d.toLocaleDateString(undefined, {year:'numeric', month:'short', day:'numeric'});
+  }
+  function fallback(message){
+    grid.innerHTML = '<p class="episodes-status dim">' + message + ' Watch the full playlist on <a href="' + playlistUrl + '" target="_blank" rel="noopener">YouTube</a>.</p>';
+  }
+
+  try{
+    const res = await fetch('assets/episodes.json', {cache:'no-store'});
+    if(!res.ok) throw new Error('episodes.json not found');
+    const episodes = await res.json();
+
+    if(!Array.isArray(episodes) || episodes.length === 0){
+      fallback('No episodes indexed yet.');
+      return;
+    }
+
+    grid.innerHTML = episodes.map(function(ep){
+      return '' +
+        '<a class="episode-card" href="' + escapeHtml(ep.url) + '" target="_blank" rel="noopener">' +
+          '<img class="episode-thumb" src="' + escapeHtml(ep.thumbnail) + '" alt="" loading="lazy">' +
+          '<div class="episode-info">' +
+            '<div class="episode-title">' + escapeHtml(ep.title) + '</div>' +
+            '<div class="episode-date">' + formatDate(ep.published) + '</div>' +
+          '</div>' +
+        '</a>';
+    }).join('');
+  }catch(err){
+    fallback("Couldn't load episodes right now.");
+  }
+})();
+</script>
 </body>
 </html>
