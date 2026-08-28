@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "videoId": "",
+    "title": "Designing an Agent Like a CTA",
+    "url": "https://open.spotify.com/episode/4AeRMgqo9RTpaQInvHPTWR",
+    "published": "2026-08-27",
+    "thumbnail": "https://i.scdn.co/image/ab6765630000f68d10cb54e5360bfb077d602090",
+    "description": "Most failed Agentforce builds don't fail because a Subagent was misconfigured — they fail because nobody could answer what this agent is actually responsible for."
+  },
+  {
+    "videoId": "",
+    "title": "Agentforce Isn't Magic, It's Architecture",
+    "url": "https://open.spotify.com/episode/5lu7894nDE2OmnFSav4Nu1",
+    "published": "2026-08-24",
+    "thumbnail": "https://i.scdn.co/image/ab6765630000f68d9b60ae526afdf7dfd6bafe08",
+    "description": "Season 3 opener: the six-step Atlas Reasoning Engine loop and the three levers every architect controls — Subagents, Actions, and Instructions."
+  },
+  {
+    "videoId": "",
+    "title": "Who Gave Frankie the Keys?",
+    "url": "https://open.spotify.com/episode/5cvXaaiOnx3VUuLEyjG4I9",
+    "published": "2026-08-23",
+    "thumbnail": "https://i.scdn.co/image/ab6765630000f68d266ffe7b0c467d1e768fd494",
+    "description": "A deep dive into least privilege, profiles, and the permission sprawl that quietly builds up over years."
+  }
+]
