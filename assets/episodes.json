@@ -1,26 +1,50 @@
 [
   {
-    "videoId": "",
+    "videoId": "S66lmQSi0LY",
     "title": "Designing an Agent Like a CTA",
-    "url": "https://open.spotify.com/episode/4AeRMgqo9RTpaQInvHPTWR",
-    "published": "2026-08-27",
-    "thumbnail": "https://i.scdn.co/image/ab6765630000f68d10cb54e5360bfb077d602090",
-    "description": "Most failed Agentforce builds don't fail because a Subagent was misconfigured — they fail because nobody could answer what this agent is actually responsible for."
+    "url": "https://www.youtube.com/watch?v=S66lmQSi0LY",
+    "published": "2026-08-27T05:33:08+00:00",
+    "thumbnail": "https://i4.ytimg.com/vi/S66lmQSi0LY/hqdefault.jpg",
+    "description": "Most failed Agentforce builds don't fail because a Subagent was misconfigured, they fail because nobody could answer \"what is this agent actually responsible for\" before anyone ope"
   },
   {
-    "videoId": "",
+    "videoId": "HTfTu1V45u8",
     "title": "Agentforce Isn't Magic, It's Architecture",
-    "url": "https://open.spotify.com/episode/5lu7894nDE2OmnFSav4Nu1",
-    "published": "2026-08-24",
-    "thumbnail": "https://i.scdn.co/image/ab6765630000f68d9b60ae526afdf7dfd6bafe08",
-    "description": "Season 3 opener: the six-step Atlas Reasoning Engine loop and the three levers every architect controls — Subagents, Actions, and Instructions."
+    "url": "https://www.youtube.com/watch?v=HTfTu1V45u8",
+    "published": "2026-08-24T06:31:14+00:00",
+    "thumbnail": "https://i1.ytimg.com/vi/HTfTu1V45u8/hqdefault.jpg",
+    "description": "Everyone thinks Agentforce is just a chatbot with a Salesforce badge. It isn't and the gap between those two ideas is exactly where production incidents are born. In the season ope"
   },
   {
-    "videoId": "",
+    "videoId": "H67b7O3R28g",
     "title": "Who Gave Frankie the Keys?",
-    "url": "https://open.spotify.com/episode/5cvXaaiOnx3VUuLEyjG4I9",
-    "published": "2026-08-23",
-    "thumbnail": "https://i.scdn.co/image/ab6765630000f68d266ffe7b0c467d1e768fd494",
-    "description": "A deep dive into least privilege, profiles, and the permission sprawl that quietly builds up over years."
+    "url": "https://www.youtube.com/watch?v=H67b7O3R28g",
+    "published": "2026-08-23T02:13:26+00:00",
+    "thumbnail": "https://i1.ytimg.com/vi/H67b7O3R28g/hqdefault.jpg",
+    "description": "Frankie realizes, mid-episode, that he's somehow been carrying master keys to every room in the castle , rooms he has no business being in. A deep dive into least privilege, profil"
+  },
+  {
+    "videoId": "k12MLobRyD0",
+    "title": "Hiding the Body: Data Masking & Shield",
+    "url": "https://www.youtube.com/watch?v=k12MLobRyD0",
+    "published": "2026-08-22T17:20:26+00:00",
+    "thumbnail": "https://i4.ytimg.com/vi/k12MLobRyD0/hqdefault.jpg",
+    "description": "Frankie needs to hide some very sensitive evidence from prying eyes in a lower sandbox environment. Enter Salesforce Shield and Data Mask two tools that get confused constantly, an"
+  },
+  {
+    "videoId": "3afZBMiJMhs",
+    "title": "Frankie's Physical: The Annual Security Health Check",
+    "url": "https://www.youtube.com/watch?v=3afZBMiJMhs",
+    "published": "2026-08-21T05:45:18+00:00",
+    "thumbnail": "https://i4.ytimg.com/vi/3afZBMiJMhs/hqdefault.jpg",
+    "description": "Frankie gets dragged, kicking and screaming, into his annual physical, except it's not a stethoscope, it's Salesforce's Security Health Check, and the results are... not great. Thi"
+  },
+  {
+    "videoId": "JNuwItPRP2Y",
+    "title": "The Uninvited Guest",
+    "url": "https://www.youtube.com/watch?v=JNuwItPRP2Y",
+    "published": "2026-08-20T12:42:56+00:00",
+    "thumbnail": "https://i3.ytimg.com/vi/JNuwItPRP2Y/hqdefault.jpg",
+    "description": "Frankie discovers that a total stranger has been wandering the castle unsupervised no invitation, no login, no manners. Turns out it's your org's Guest User profile, and it's seen "
   }
 ]
