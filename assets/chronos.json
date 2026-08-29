@@ -1,42 +1,32 @@
 [
   {
-    "id": "S-014",
-    "title": "Community Summit: Apex Design Patterns",
-    "date": "2026-09-24",
-    "time": "18:00 UTC",
-    "where": "Online · Zoom",
-    "tag": "Summit",
-    "description": "A live assembly where architects break down battle-tested Apex patterns for large-scale orgs. Q&A throughout.",
-    "registerUrl": "https://example.com/register/community-summit-apex-design-patterns"
+    "id": "S-08",
+    "title": "Session 8: Feed Me, Igor: Grounding Your Agent in Real Data",
+    "date": "2026-09-20",
+    "time": "11:00 GST",
+    "where": "Online · Trailblazer Community",
+    "tag": "Agentforce - Workshop",
+    "description": "Igor is alive but currently a compulsive liar. This session we ground him in FrankenForce's real product data, so he stops guessing and starts telling the truth — a core Agentforce concept for anyone building agents. Jump in even if you missed Session 7.",
+    "registerUrl": "https://trailblazercommunitygroups.com/events/details/salesforce-salesforce-developer-group-dubai-uae-presents-de-fragging-the-franken-org-session-8-feed-me-igor-grounding-your-agent-in-real-data/"
   },
   {
-    "id": "S-015",
-    "title": "Office Hours: Integration Q&A",
-    "date": "2026-10-02",
-    "time": "17:00 UTC",
-    "where": "Online · Discord",
+    "id": "S-09",
+    "title": "Session 9: From Dusty Old Rules to Agent Actions",
+    "date": "2026-09-27",
+    "time": "11:00 GST",
+    "where": "Online · Trailblazer Community",
     "tag": "Office Hours",
-    "description": "Bring your integration questions — REST, events, middleware, or the thing you're afraid to ask about.",
-    "registerUrl": "https://example.com/register/office-hours-integration-qa"
+    "description": "FrankenForce's Seam-Split Exchange Guarantee is buried in an ancient Flow nobody understands. This session we rebuild it as a real, invocable Agentforce Action, live. If your org has similar legacy logic, the pattern translates directly.",
+    "registerUrl": "https://trailblazercommunitygroups.com/events/details/salesforce-salesforce-developer-group-dubai-uae-presents-de-fragging-the-franken-org-session-9-from-dusty-old-rules-to-agent-actions/"
   },
   {
-    "id": "S-016",
-    "title": "Workshop: LWC Performance Tuning",
-    "date": "2026-10-18",
-    "time": "16:00 UTC",
-    "where": "Online · Stream",
-    "tag": "Workshop",
-    "description": "Hands-on session profiling and fixing slow Lightning Web Components in a real (monstrous) org.",
-    "registerUrl": "https://example.com/register/lwc-performance-tuning"
-  },
-  {
-    "id": "S-017",
-    "title": "Panel: Agentforce in Production",
-    "date": "2026-11-05",
-    "time": "18:00 UTC",
-    "where": "Online · Zoom",
-    "tag": "Panel",
-    "description": "Three architects compare notes on shipping Agentforce to real users — what broke, what held.",
-    "registerUrl": "https://example.com/register/agentforce-in-production"
+    "id": "S-010",
+    "title": "Session 10: Trust No Monster: Zero-Trust Permissions for Renfield",
+    "date": "2026-10-04",
+    "time": "11:00 GST",
+    "where": "Online · Trailblazer Community",
+    "tag": "Agentforce - Workshop",
+    "description": "Should an AI agent unilaterally refund a $500 order? Renfield currently thinks yes — we disagree. This session we build zero-trust permission boundaries for autonomous agents: what they can decide alone vs. what needs a human sign-off.",
+    "registerUrl": "https://trailblazercommunitygroups.com/events/details/salesforce-salesforce-developer-group-dubai-uae-presents-de-fragging-the-franken-org-session-10-trust-no-monster-zero-trust-permissions-for-renfield/"
   }
 ]
