@@ -1,5 +1,13 @@
 [
   {
+    "videoId": "LVvb2DE_zbw",
+    "title": "Why Your Subagents Are a Confusing Mess (And How to Fix Them)",
+    "url": "https://www.youtube.com/watch?v=LVvb2DE_zbw",
+    "published": "2026-08-29T00:59:33+00:00",
+    "thumbnail": "https://i1.ytimg.com/vi/LVvb2DE_zbw/hqdefault.jpg",
+    "description": "Two Subagents is easy. Thirty-one Subagents with four of them named some version of \"General\" is a disaster waiting to confuse both your customers and your on-call engineer. \n\n\nIn "
+  },
+  {
     "videoId": "S66lmQSi0LY",
     "title": "Designing an Agent Like a CTA",
     "url": "https://www.youtube.com/watch?v=S66lmQSi0LY",
@@ -38,13 +46,5 @@
     "published": "2026-08-21T05:45:18+00:00",
     "thumbnail": "https://i4.ytimg.com/vi/3afZBMiJMhs/hqdefault.jpg",
     "description": "Frankie gets dragged, kicking and screaming, into his annual physical, except it's not a stethoscope, it's Salesforce's Security Health Check, and the results are... not great. Thi"
-  },
-  {
-    "videoId": "JNuwItPRP2Y",
-    "title": "The Uninvited Guest",
-    "url": "https://www.youtube.com/watch?v=JNuwItPRP2Y",
-    "published": "2026-08-20T12:42:56+00:00",
-    "thumbnail": "https://i3.ytimg.com/vi/JNuwItPRP2Y/hqdefault.jpg",
-    "description": "Frankie discovers that a total stranger has been wandering the castle unsupervised no invitation, no login, no manners. Turns out it's your org's Guest User profile, and it's seen "
   }
 ]
