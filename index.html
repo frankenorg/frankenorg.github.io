@@ -2,533 +2,513 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YTPM58HSNE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTPM58HSNE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YTPM58HSNE');
+  </script>
 
-  gtag('config', 'G-YTPM58HSNE');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Franken Org - It's Alive But Is it Scalable ?</title>
-<meta name="description" content="The Franken Org: a podcast for Salesforce architects and developers keeping decade-old orgs alive. Listen on YouTube, Spotify, Amazon Music & iHeartRadio.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --lab-black:#0d1210;
-    --lab-black-2:#131a16;
-    --panel:#161e19;
-    --term-green:#6fe07a;
-    --term-green-dim:#3d7a48;
-    --cream:#ece4d0;
-    --cream-dim:#b9b19f;
-    --volt:#b09bfa;
-    --bolt-gray:#525d55;
-    --amber:#e8b84b;
-    --danger:#ff6b5f;
-    --line:#2a332d;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:
-      repeating-linear-gradient(0deg, rgba(255,255,255,0.018) 0px, rgba(255,255,255,0.018) 1px, transparent 1px, transparent 3px),
-      radial-gradient(ellipse at 50% -10%, #1a2420 0%, var(--lab-black) 55%);
-    color:var(--cream);
-    font-family:'JetBrains Mono', monospace;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding:6vw 5vw 4rem;
-  }
-  a{color:inherit;}
-  .wrap{width:100%;max-width:760px;}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Franken Org · Taming Enterprise Tech Monsters</title>
+  <meta name="description" content="A podcast and hub for Salesforce architects and developers keeping decade-old orgs alive. Code, audio, and hard-won architecture lessons, converged.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
 
-  /* ---- logo ---- */
-  .site-logo{
-    display:block;
-    width:100%;
-    max-width:300px;
-    height:auto;
-    margin:0 auto 1.5rem;
-    filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5));
-  }
-
-  /* ---- terminal window ---- */
-  .terminal{
-    background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:10px;
-    box-shadow:0 30px 60px -25px rgba(0,0,0,0.7);
-    overflow:hidden;
-    margin-top:1rem;
-  }
-  .term-bar{
-    display:flex;
-    align-items:center;
-    gap:.5rem;
-    padding:.7rem .9rem;
-    background:#101613;
-    border-bottom:1px solid var(--line);
-  }
-  .dot{width:10px;height:10px;border-radius:50%;display:inline-block;}
-  .dot.r{background:var(--danger);}
-  .dot.a{background:var(--amber);}
-  .dot.g{background:var(--term-green);}
-  .term-title{
-    margin-left:.6rem;
-    font-size:.72rem;
-    color:var(--cream-dim);
-    letter-spacing:.02em;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-  }
-  .term-body{
-    padding:1.3rem 1.2rem 1.5rem;
-    font-size:.86rem;
-    line-height:1.75;
-  }
-  .term-body .prompt{color:var(--term-green-dim);}
-  .term-body .cmd{color:var(--cream);}
-  .term-body .warn{color:var(--amber);}
-  .term-body .err{color:var(--danger);}
-  .term-body .ok{color:var(--term-green);}
-  .term-body .dim{color:var(--cream-dim);}
-  .cursor{
-    display:inline-block;
-    width:8px;height:1em;
-    background:var(--term-green);
-    vertical-align:text-bottom;
-    animation:blink 1s steps(1) infinite;
-  }
-  @keyframes blink{50%{opacity:0;}}
-
-  /* ---- stamp headline ---- */
-  .stamp-zone{
-    text-align:center;
-    padding:3.2rem 0 2rem;
-  }
-  .stamp{
-    display:inline-block;
-    font-family:'Special Elite', monospace;
-    font-size:clamp(2rem, 7vw, 3.6rem);
-    color:var(--danger);
-    border:.35rem double var(--danger);
-    padding:.5rem 1.4rem;
-    transform:rotate(-3deg);
-    letter-spacing:.03em;
-    text-transform:uppercase;
-    line-height:1.15;
-    filter:drop-shadow(0 0 18px rgba(255,107,95,0.15));
-    animation:flicker 6s infinite;
-  }
-  @keyframes flicker{
-    0%,93%,97%,100%{opacity:1;}
-    95%{opacity:.72;}
-  }
-  .stamp-sub{
-    margin-top:0;
-    font-size:1.05rem;
-    color:var(--cream-dim);
-    max-width:44ch;
-    margin-left:auto;
-    margin-right:auto;
-    line-height:1.7;
-  }
-  .stamp-sub b{color:var(--cream);font-weight:700;}
-
-  /* ---- linkedin cta ---- */
-  .linkedin-cta{
-    margin:2.2rem auto 0;
-    max-width:480px;
-    display:flex;
-    align-items:center;
-    gap:1rem;
-    text-align:left;
-    text-decoration:none;
-    background:linear-gradient(180deg, #16211c, var(--panel));
-    border:1px solid var(--term-green-dim);
-    border-radius:12px;
-    padding:1.1rem 1.3rem;
-    box-shadow:0 0 0 0 rgba(111,224,122,0.0);
-    transition:transform .15s ease, box-shadow .2s ease, border-color .2s ease;
-  }
-  .linkedin-cta:hover, .linkedin-cta:focus-visible{
-    transform:translateY(-3px);
-    border-color:var(--term-green);
-    box-shadow:0 12px 32px -10px rgba(111,224,122,0.35);
-  }
-  .li-badge{
-    flex:0 0 auto;
-    width:52px;height:52px;
-    border-radius:10px;
-    background:#0A66C2;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-weight:800;
-    font-size:1.4rem;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:inset 0 0 0 2px rgba(255,255,255,0.15);
-  }
-  .li-copy{display:flex;flex-direction:column;gap:.25rem;flex:1;}
-  .li-title{font-size:1.02rem;font-weight:700;color:var(--cream);}
-  .li-sub{font-size:.76rem;color:var(--cream-dim);line-height:1.5;}
-  .li-arrow{
-    flex:0 0 auto;
-    font-size:1.3rem;
-    color:var(--term-green);
-    transition:transform .15s ease;
-  }
-  .linkedin-cta:hover .li-arrow{transform:translateX(4px);}
-  @media(max-width:480px){
-    .linkedin-cta{padding:1rem;}
-    .li-badge{width:44px;height:44px;font-size:1.15rem;}
-  }
-
-  /* ---- ekg signature ---- */
-  .vitals{
-    margin-top:2.6rem;
-    background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:10px;
-    padding:1rem 1.2rem;
-    display:flex;
-    align-items:center;
-    gap:1rem;
-  }
-  .vitals svg{flex:0 0 auto;width:150px;height:44px;}
-  .vitals-text{font-size:.75rem;color:var(--cream-dim);letter-spacing:.03em;}
-  .vitals-text .status{color:var(--term-green);font-weight:700;}
-  #ekg-path{
-    stroke:var(--term-green);
-    stroke-width:2;
-    fill:none;
-    stroke-dasharray:220;
-    stroke-dashoffset:220;
-    animation:draw 1.6s linear infinite;
-    filter:drop-shadow(0 0 4px rgba(111,224,122,0.6));
-  }
-  @keyframes draw{
-    to{stroke-dashoffset:-220;}
-  }
-
-  /* ---- stitched divider ---- */
-  .stitch{
-    width:100%;
-    height:22px;
-    margin:3rem 0 2.2rem;
-    background-image: repeating-linear-gradient(90deg, var(--bolt-gray) 0 10px, transparent 10px 20px);
-    background-size:20px 2px;
-    background-repeat:repeat-x;
-    background-position:center;
-    position:relative;
-  }
-  .stitch::before, .stitch::after{
-    content:"";
-    position:absolute;
-    top:50%;
-    width:12px;height:12px;
-    border-left:2px solid var(--bolt-gray);
-    border-bottom:2px solid var(--bolt-gray);
-    transform:translateY(-50%) rotate(-45deg);
-  }
-  .stitch::before{left:0;}
-  .stitch::after{right:0;}
-
-  /* ---- listen section ---- */
-  .section-eyebrow{
-    font-size:.72rem;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--volt);
-    margin-bottom:.5rem;
-  }
-  h2{
-    font-family:'Special Elite', monospace;
-    font-weight:400;
-    font-size:1.5rem;
-    margin:0 0 1.3rem;
-    color:var(--cream);
-  }
-  .platforms{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:.8rem;
-  }
-  @media(max-width:520px){ .platforms{grid-template-columns:1fr;} }
-  .platform{
-    display:flex;
-    align-items:center;
-    gap:.7rem;
-    background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:8px;
-    padding:.85rem 1rem;
-    text-decoration:none;
-    transition:border-color .15s ease, transform .15s ease;
-  }
-  .platform:hover, .platform:focus-visible{
-    border-color:var(--term-green-dim);
-    transform:translateY(-2px);
-  }
-  .platform .icon{
-    width:34px;height:34px;flex:0 0 auto;
-    border-radius:6px;
-    display:flex;align-items:center;justify-content:center;
-    font-size:1.1rem;
-    background:var(--lab-black-2);
-    border:1px solid var(--line);
-  }
-  .platform .label{font-size:.82rem;}
-  .platform .label small{display:block;color:var(--cream-dim);font-size:.7rem;margin-top:.1rem;}
-  .platform.static{cursor:default;}
-  .platform.static:hover{transform:none;border-color:var(--line);}
-
-  /* ---- latest episodes ---- */
-  .episodes-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:.9rem;
-  }
-  @media(max-width:520px){ .episodes-grid{grid-template-columns:1fr;} }
-  .episode-card{
-    display:flex;
-    flex-direction:column;
-    background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:8px;
-    overflow:hidden;
-    text-decoration:none;
-    transition:border-color .15s ease, transform .15s ease;
-  }
-  .episode-card:hover, .episode-card:focus-visible{
-    border-color:var(--term-green-dim);
-    transform:translateY(-2px);
-  }
-  .episode-thumb{
-    width:100%;
-    aspect-ratio:16/9;
-    object-fit:cover;
-    display:block;
-    background:var(--lab-black-2);
-    border-bottom:1px solid var(--line);
-  }
-  .episode-info{padding:.75rem .85rem .9rem;}
-  .episode-title{
-    font-size:.82rem;
-    color:var(--cream);
-    line-height:1.5;
-    display:-webkit-box;
-    -webkit-line-clamp:2;
-    -webkit-box-orient:vertical;
-    overflow:hidden;
-  }
-  .episode-date{
-    margin-top:.4rem;
-    font-size:.7rem;
-    color:var(--cream-dim);
-  }
-  .episodes-status{
-    font-size:.82rem;
-    color:var(--cream-dim);
-    line-height:1.7;
-  }
-  .episodes-status a{color:var(--volt);text-decoration:underline;text-underline-offset:3px;}
-  .episodes-status.dim{grid-column:1/-1;}
-
-  .search-note{
-    margin-top:.9rem;
-    font-size:.78rem;
-    color:var(--cream-dim);
-    line-height:1.7;
-  }
-  .search-note code{
-    background:var(--lab-black-2);
-    border:1px solid var(--line);
-    border-radius:4px;
-    padding:.1rem .4rem;
-    color:var(--term-green);
-  }
-
-  /* ---- contact ---- */
-  .contact{
-    margin-top:2.6rem;
-    background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:8px;
-    padding:1rem 1.1rem;
-    font-size:.85rem;
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    gap:.5rem .7rem;
-  }
-  .contact .prompt{color:var(--term-green-dim);}
-  .contact a{color:var(--volt);text-decoration:underline;text-underline-offset:3px;}
-  .contact a:hover{color:var(--cream);}
-
-  footer{
-    margin-top:3rem;
-    text-align:center;
-    font-size:.72rem;
-    color:var(--bolt-gray);
-    line-height:1.8;
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    .cursor, .stamp, #ekg-path{animation:none !important;}
-  }
-</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<div class="wrap">
 
-  <img class="site-logo" src="assets/frankenorg-logo.png" alt="The Franken Org">
-
-  <div class="terminal">
-    <div class="term-bar">
-      <span class="dot r"></span><span class="dot a"></span><span class="dot g"></span>
-      <span class="term-title">frankenorg_status.log — 1 error, 2 warnings, 0 regrets</span>
-    </div>
-    <div class="term-body">
-      <div><span class="prompt">$</span> <span class="cmd">whoami</span></div>
-      <div class="dim">&gt; a Salesforce architect who inherited orgs with 15+ years of "temporary" workarounds</div>
-      <div>&nbsp;</div>
-      <div><span class="prompt">$</span> <span class="cmd">sf diagnose --org=legacy --deep</span></div>
-      <div class="warn">&gt; WARNING: process builder and flow fighting over the same record</div>
-      <div class="warn">&gt; WARNING: 47 fields named "temp2_final_USE_THIS_ONE"</div>
-      <div class="err">&gt; ERROR: nobody left at the company remembers why this validation rule exists</div>
-      <div class="ok">&gt; STATUS: it's alive (somehow)<span class="cursor"></span></div>
-    </div>
-  </div>
-
-  <div class="stamp-zone">
-    <p class="stamp-sub"><b>Good things take some time</b> and so does untangling fifteeen years of Apex triggers. We're bolting this website together. Stay tuned.</p>
-
-    <a class="linkedin-cta" href="https://www.linkedin.com/company/frankenorg" target="_blank" rel="noopener">
-      <span class="li-badge" aria-hidden="true">in</span>
-      <span class="li-copy">
-        <span class="li-title">Meanwhile, follow us on LinkedIn</span>
-        <span class="li-sub">All updated information lives there — new episodes, news, everything</span>
-      </span>
-      <span class="li-arrow" aria-hidden="true">→</span>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">
+      <img src="assets/frankenorg-logo.png" alt="The Franken Org">
     </a>
-  </div>
-
-  <div class="vitals">
-    <svg viewBox="0 0 150 44" preserveAspectRatio="none" aria-hidden="true">
-      <path id="ekg-path" d="M0,22 L28,22 L36,8 L44,36 L52,22 L64,22 L70,14 L76,30 L82,22 L150,22" />
-    </svg>
-    <div class="vitals-text">
-      <div class="status">ORG STATUS: ALIVE</div>
-      <div>uptime: unknown &nbsp;·&nbsp; last documented: never &nbsp;·&nbsp; vibes: stable-ish</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#top"><span class="n">01</span> System Core</a></li>
+        <li><a href="#sync-engine"><span class="n">02</span> Sync Engine</a></li>
+        <li><a href="#library"><span class="n">03</span> Library</a></li>
+        <li><a href="#chronos"><span class="n">04</span> Chronos</a></li>
+        <li><a href="#contact"><span class="n">05</span> Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <a href="about.html" class="about">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+        About
+      </a>
+      <!-- TODO: point this at your repo once the site is pushed, e.g. https://github.com/yourorg/frankenorg.com -->
+      <a href="#" class="nav-source">VIEW SOURCE</a>
     </div>
   </div>
+</header>
 
-  <div class="stitch" role="presentation"></div>
+<main id="top">
 
-  <section>
-    <div class="section-eyebrow">// latest drop</div>
-    <h2>Recent episodes</h2>
-    <div id="episodes-grid" class="episodes-grid">
-      <p class="episodes-status dim">Loading latest episodes…</p>
+  <!-- ================= HERO / SYSTEM CORE ================= -->
+  <section class="hero container">
+    <div class="eyebrow"><span class="dot"></span> // THE FRANKEN ORG · SYSTEM CORE</div>
+    <h1>Taming Enterprise Tech <span class="accent">Monsters,</span> One Stitch at a Time.</h1>
+    <p class="lede">
+      Welcome to The Franken Org, where we drag stitched-together architectures, legacy monoliths, and terrifying
+      enterprise tech stacks onto the slab to see what really makes them tick. We unpack the madness of modern
+      software engineering, agentic AI, and complex cloud ecosystems with a mix of deep technical grit and
+      unapologetic humor. Whether your org is a sleek masterpiece or a sprawling beast held together by digital
+      lightning and hope, pull up a chair. Let's bring this thing to life.
+    </p>
+    <div class="hero-actions">
+      <!-- TODO: point this at your repo once the site is pushed -->
+      <a href="#" class="btn btn-fill">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.5 0 12.26c0 5.42 3.44 10.02 8.21 11.64.6.11.82-.27.82-.6 0-.29-.01-1.06-.02-2.08-3.34.74-4.04-1.64-4.04-1.64-.55-1.42-1.34-1.8-1.34-1.8-1.09-.76.08-.75.08-.75 1.2.09 1.84 1.26 1.84 1.26 1.07 1.87 2.81 1.33 3.49 1.02.11-.79.42-1.33.76-1.64-2.67-.31-5.47-1.37-5.47-6.08 0-1.34.46-2.44 1.23-3.3-.12-.31-.53-1.55.12-3.23 0 0 1-.33 3.3 1.26a11.2 11.2 0 0 1 6 0c2.29-1.59 3.29-1.26 3.29-1.26.65 1.68.24 2.92.12 3.23.77.86 1.23 1.96 1.23 3.3 0 4.72-2.81 5.76-5.49 6.07.43.38.81 1.13.81 2.28 0 1.65-.02 2.98-.02 3.38 0 .33.22.72.83.6C20.56 22.27 24 17.67 24 12.26 24 5.5 18.63 0 12 0Z"/></svg>
+        Explore the Source
+      </a>
+      <a href="#library" class="btn btn-outline">
+        Enter the Library
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+
+    <div class="status-console bracket">
+      <div class="console-head">
+        <span>Status Console</span>
+        <span class="live"><span class="live-dot"></span> live · system nominal</span>
+      </div>
+      <div class="console-body" id="status-console-body">
+        <div class="console-cell">
+          <span class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 10v4M6 6v12M10 3v18M14 6v12M18 10v4"/></svg>
+          </span>
+          <div>
+            <div class="label">Latest Podcast</div>
+            <div class="title" id="console-ep-title">Loading…</div>
+            <div class="meta" id="console-ep-meta">&nbsp;</div>
+          </div>
+        </div>
+        <div class="console-cell">
+          <span class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+          </span>
+          <div>
+            <div class="label">Next Session</div>
+            <div class="title" id="console-session-title">Loading…</div>
+            <div class="meta" id="console-session-meta">&nbsp;</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <div class="stitch" role="presentation"></div>
-
-  <section>
-    <div class="section-eyebrow">// meanwhile</div>
-    <h2>The podcast is already running</h2>
-    <div class="platforms">
-      <a class="platform" href="https://www.youtube.com/playlist?list=PLMADD-VEXGwY" target="_blank" rel="noopener">
-        <span class="icon">▶</span>
-        <span class="label">YouTube<small>Watch the full playlist</small></span>
-      </a>
-      <a class="platform" href="https://open.spotify.com/show/033VIwiH526O5xfmqSE515?si=af486339a3ea4901" target="_blank" rel="noopener">
-        <span class="icon">♪</span>
-        <span class="label">Spotify<small>Listen to the show</small></span>
-      </a>
-      <div class="platform static">
-        <span class="icon">🎧</span>
-        <span class="label">Amazon Music<small>Search "The Franken Org"</small></span>
+  <!-- ================= SYNC ENGINE / EPISODES ================= -->
+  <section class="section" id="sync-engine">
+    <div class="container">
+      <div class="eyebrow"><span class="dot"></span> // MODULE 02 · SYNC ENGINE</div>
+      <div class="section-head">
+        <h2>Audio wisdom,<br>bridged to execution.</h2>
+        <p>The most recent episodes from the slab. Open the full frequency for the archive.</p>
       </div>
-      <div class="platform static">
-        <span class="icon">📻</span>
-        <span class="label">iHeartRadio<small>Search "The Franken Org"</small></span>
+      <div class="subrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        / PODCASTS — LATEST EPISODES
+      </div>
+      <div class="episodes-grid" id="episodes-grid">
+        <p style="color:var(--muted);font-family:var(--font-mono);font-size:.85rem;">Loading episodes…</p>
+      </div>
+      <div class="center-cta">
+        <a href="https://open.spotify.com/show/033VIwiH526O5xfmqSE515?si=af486339a3ea4901" target="_blank" rel="noopener" class="btn btn-fill">
+          Explore All Episodes
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
     </div>
-    <p class="search-note">Can't find a direct link above? Search <code>The Franken Org</code> in your app of choice — we're there, wearing a slightly different bolt on each platform.</p>
   </section>
 
-  <div class="contact">
-    <span class="prompt">$</span>
-    <span>contact --team</span>
-    <span class="dim">→</span>
-    <a href="#">podcast [at] frankenorg [dot] com</a>
+  <!-- ================= LIBRARY / MEDIA MATRIX ================= -->
+  <section class="section" id="library">
+    <div class="container">
+      <div class="eyebrow"><span class="dot"></span> // MODULE 03 · COMPONENT LIBRARY</div>
+      <div class="section-head">
+        <h2>The media matrix.</h2>
+        <p>The most recent assemblies — blog posts and YouTube builds on the same grid.</p>
+      </div>
+      <div class="library-grid" id="library-grid">
+        <p style="color:var(--muted);font-family:var(--font-mono);font-size:.85rem;">Loading library…</p>
+      </div>
+      <div class="center-cta">
+        <a href="https://www.youtube.com/playlist?list=PLMADD-VEXGwY" target="_blank" rel="noopener" class="btn btn-fill">
+          View More
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CHRONOS / TIMELINE ================= -->
+  <section class="section" id="chronos">
+    <div class="container">
+      <div class="eyebrow"><span class="dot"></span> // MODULE 04 · CHRONOS</div>
+      <div class="section-head">
+        <h2>Upcoming sessions,<br>on the timeline.</h2>
+        <p>The four nearest sessions on the calendar. Register straight from here.</p>
+      </div>
+      <div class="timeline" id="timeline">
+        <p style="color:var(--muted);font-family:var(--font-mono);font-size:.85rem;">Loading sessions…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section" id="contact" style="border-bottom:none;">
+    <div class="container">
+      <div class="eyebrow"><span class="dot"></span> // MODULE 05 · CONTACT</div>
+      <div class="section-head" style="margin-bottom:2.2rem;">
+        <h2>Open a channel<br>to the architects.</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-left">
+          <div class="info-card bracket">
+            <div class="label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+              Direct Line
+            </div>
+            <div class="value"><a href="mailto:podcast@frankenorg.com">podcast@frankenorg.com</a></div>
+          </div>
+          <div class="info-card bracket">
+            <div class="label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Coordinates
+            </div>
+            <div class="value">Remote · assembled globally</div>
+          </div>
+          <div class="info-card bracket">
+            <div class="label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></svg>
+              Channels
+            </div>
+            <div class="channels-list">
+              <a href="https://www.youtube.com/playlist?list=PLMADD-VEXGwY" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg>
+                YouTube
+              </a>
+              <a href="https://open.spotify.com/show/033VIwiH526O5xfmqSE515?si=af486339a3ea4901" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm5.5 17.3a.75.75 0 0 1-1 .25c-2.8-1.7-6.3-2.1-10.4-1.1a.75.75 0 1 1-.35-1.46c4.5-1.05 8.4-.6 11.5 1.3.36.22.47.7.25 1.02Zm1.47-3.27a.94.94 0 0 1-1.28.3c-3.2-2-8.1-2.55-11.9-1.4a.94.94 0 0 1-.55-1.8c4.3-1.3 9.7-.7 13.4 1.6.44.27.58.85.33 1.3Zm.13-3.4C15.5 8.4 8.6 8.15 4.9 9.3a1.12 1.12 0 1 1-.65-2.14c4.25-1.3 12-1 16.5 1.6a1.12 1.12 0 0 1-1.15 1.93Z"/></svg>
+                Spotify
+              </a>
+              <a href="https://www.linkedin.com/company/frankenorg" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <form class="form-card bracket" id="contact-form">
+          <div class="label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 3 18 9-18 9 4-9-4-9Z"/></svg>
+            Transmit Message
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="cf-name">name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Ada Lovelace" required>
+            </div>
+            <div class="field">
+              <label for="cf-email">email</label>
+              <input type="email" id="cf-email" name="email" placeholder="you@org.dev" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="cf-message">message</label>
+            <textarea id="cf-message" name="message" placeholder="Tell us what you're assembling…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-fill" style="margin-top:1.4rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 3 18 9-18 9 4-9-4-9Z"/></svg>
+            Transmit
+          </button>
+          <p style="font-size:.76rem;color:var(--muted);margin-top:.9rem;">
+            Opens your email client with this pre-filled, addressed to podcast@frankenorg.com.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/frankenorg-logo.png" alt="The Franken Org">
+        </div>
+        <p class="tag">
+          It's funny because it's true — somewhere in every enterprise Salesforce org, there's a monster, built from
+          years of "temporary" fixes, three departed consultants, and one integration nobody dares touch.
+        </p>
+      </div>
+      <div class="footer-col">
+        <div class="h">/ Modules</div>
+        <ul>
+          <li><a href="#top">System Core</a></li>
+          <li><a href="#sync-engine">Sync Engine</a></li>
+          <li><a href="#library">Library</a></li>
+          <li><a href="#chronos">Chronos</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="h">/ Channels</div>
+        <ul>
+          <li><a href="https://www.youtube.com/playlist?list=PLMADD-VEXGwY" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://open.spotify.com/show/033VIwiH526O5xfmqSE515?si=af486339a3ea4901" target="_blank" rel="noopener">Spotify</a></li>
+          <li><a href="https://www.linkedin.com/company/frankenorg" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>// build · stitch · deploy</span>
+      <span>© 2026 The Franken Org</span>
+    </div>
   </div>
-
-  <footer>
-    No production orgs were harmed in the making of this podcast. Much.<br>
-    © 2026 FrankenOrg — for everyone still finding out what that flow actually does.
-  </footer>
-
-</div>
+</footer>
 
 <script>
-(async function loadEpisodes(){
+function esc(str){ const d = document.createElement('div'); d.textContent = str || ''; return d.innerHTML; }
+function fmtDate(iso){
+  if(!iso) return '';
+  const d = new Date(iso);
+  if(isNaN(d)) return iso;
+  return d.toLocaleDateString(undefined, {year:'numeric', month:'short', day:'numeric'});
+}
+
+let episodesCache = null;
+let sessionsCache = null;
+
+/* ============================================================
+   EPISODES — pulled from assets/episodes.json
+   (kept updated by .github/workflows/update-episodes.yml)
+   ============================================================ */
+async function loadEpisodes(){
   const grid = document.getElementById('episodes-grid');
-  const playlistUrl = 'https://www.youtube.com/playlist?list=PLMADD-VEXGwY';
-
-  function escapeHtml(str){
-    const div = document.createElement('div');
-    div.textContent = str || '';
-    return div.innerHTML;
-  }
-  function formatDate(iso){
-    if(!iso) return '';
-    const d = new Date(iso);
-    if(isNaN(d)) return '';
-    return d.toLocaleDateString(undefined, {year:'numeric', month:'short', day:'numeric'});
-  }
-  function fallback(message){
-    grid.innerHTML = '<p class="episodes-status dim">' + message + ' Watch the full playlist on <a href="' + playlistUrl + '" target="_blank" rel="noopener">YouTube</a>.</p>';
-  }
-
   try{
     const res = await fetch('assets/episodes.json', {cache:'no-store'});
-    if(!res.ok) throw new Error('episodes.json not found');
+    if(!res.ok) throw new Error('no episodes.json');
     const episodes = await res.json();
+    episodesCache = Array.isArray(episodes) ? episodes.slice() : [];
+    episodesCache.sort(function(a,b){ return new Date(b.published) - new Date(a.published); });
 
-    if(!Array.isArray(episodes) || episodes.length === 0){
-      fallback('No episodes indexed yet.');
+    if(episodesCache.length === 0){
+      grid.innerHTML = '<p style="color:var(--muted);font-family:var(--font-mono);font-size:.85rem;">No episodes indexed yet — check the <a href="https://open.spotify.com/show/033VIwiH526O5xfmqSE515" target="_blank" rel="noopener" style="color:var(--lime);">show page</a> directly.</p>';
+    }else{
+      grid.innerHTML = episodesCache.slice(0, 4).map(function(ep, i){
+        const num = String(episodesCache.length - i).padStart(3, '0');
+        return '' +
+          '<div class="ep-card bracket">' +
+            '<div class="ep-meta">' +
+              '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M12 2a10 10 0 0 1 0 20M12 2a10 10 0 0 0 0 20"/></svg>' +
+              '<span>EP · ' + num + '</span>' +
+              '<span class="sep">·</span>' +
+              '<span class="date">' + fmtDate(ep.published) + '</span>' +
+            '</div>' +
+            '<h3>' + esc(ep.title) + '</h3>' +
+            (ep.description ? '<p>' + esc(ep.description) + '</p>' : '') +
+            '<a class="btn btn-outline small" href="' + esc(ep.url) + '" target="_blank" rel="noopener">' +
+              '<svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M8 5v14l11-7z"/></svg>' +
+              ' Listen Now' +
+            '</a>' +
+          '</div>';
+      }).join('');
+    }
+  }catch(err){
+    episodesCache = [];
+    grid.innerHTML = '<p style="color:var(--muted);font-family:var(--font-mono);font-size:.85rem;">Couldn\'t load episodes right now.</p>';
+  }
+  updateStatusConsole();
+}
+
+/* ============================================================
+   LIBRARY — pulled from assets/library.json.
+   type: "video" opens the YouTube link in a new tab.
+   type: "post" opens that article's own page (see /articles/).
+   ============================================================ */
+async function loadLibrary(){
+  const grid = document.getElementById('library-grid');
+  const gradients = [
+    'radial-gradient(circle at 30% 30%, rgba(163,217,60,0.35), transparent 60%), linear-gradient(160deg,#0d1712,#070808)',
+    'radial-gradient(circle at 70% 40%, rgba(80,200,160,0.3), transparent 60%), linear-gradient(160deg,#0b1512,#070808)',
+    'radial-gradient(circle at 50% 70%, rgba(163,217,60,0.25), transparent 55%), linear-gradient(160deg,#0e1410,#070808)'
+  ];
+  try{
+    const res = await fetch('assets/library.json', {cache:'no-store'});
+    if(!res.ok) throw new Error('no library.json');
+    const items = await res.json();
+
+    if(!Array.isArray(items) || items.length === 0){
+      grid.innerHTML = '<p style="color:var(--muted);font-family:var(--font-mono);font-size:.85rem;">Nothing in the library yet.</p>';
       return;
     }
 
-    grid.innerHTML = episodes.map(function(ep){
+    grid.innerHTML = items.map(function(item, i){
+      const isVideo = item.type === 'video';
+      const ctaLabel = isVideo ? 'Watch on YouTube' : 'Read the Post';
+      const ctaIcon = isVideo
+        ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'
+        : '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>';
+      const tagIcon = isVideo
+        ? '<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'
+        : '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>';
+      const thumbBg = item.thumbnail
+        ? 'background-image:url(' + esc(item.thumbnail) + ');background-size:cover;background-position:center;'
+        : 'background:' + gradients[i % gradients.length] + ';';
+      // "post" items are internal pages -> open in same tab. "video" items are external -> new tab.
+      const target = isVideo ? ' target="_blank" rel="noopener"' : '';
+
       return '' +
-        '<a class="episode-card" href="' + escapeHtml(ep.url) + '" target="_blank" rel="noopener">' +
-          '<img class="episode-thumb" src="' + escapeHtml(ep.thumbnail) + '" alt="" loading="lazy">' +
-          '<div class="episode-info">' +
-            '<div class="episode-title">' + escapeHtml(ep.title) + '</div>' +
-            '<div class="episode-date">' + formatDate(ep.published) + '</div>' +
+        '<div class="lib-card bracket">' +
+          '<div class="lib-thumb">' +
+            '<div class="grad" style="' + thumbBg + '"></div>' +
+            '<span class="tag">' + tagIcon + ' ' + esc(item.tag) + '</span>' +
+            (item.readTime ? '<span class="badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> ' + esc(item.readTime) + '</span>' : '') +
           '</div>' +
-        '</a>';
+          '<div class="lib-body">' +
+            '<div class="lib-date">' + esc(item.date) + '</div>' +
+            '<h3>' + esc(item.title) + '</h3>' +
+            (item.excerpt ? '<p>' + esc(item.excerpt) + '</p>' : '') +
+            '<a class="lib-link" href="' + esc(item.url) + '"' + target + '>' + ctaLabel + ' ' + ctaIcon + '</a>' +
+          '</div>' +
+        '</div>';
     }).join('');
   }catch(err){
-    fallback("Couldn't load episodes right now.");
+    grid.innerHTML = '<p style="color:var(--muted);font-family:var(--font-mono);font-size:.85rem;">Couldn\'t load the library right now.</p>';
   }
-})();
+}
+
+/* ============================================================
+   CHRONOS — pulled from assets/chronos.json.
+   Shows the 4 nearest upcoming sessions (soonest first).
+   Each card links out to its own registration page.
+   ============================================================ */
+async function loadChronos(){
+  const wrap = document.getElementById('timeline');
+  try{
+    const res = await fetch('assets/chronos.json', {cache:'no-store'});
+    if(!res.ok) throw new Error('no chronos.json');
+    const all = await res.json();
+    sessionsCache = Array.isArray(all) ? all.slice() : [];
+
+    const now = new Date();
+    let upcoming = sessionsCache.filter(function(s){ return new Date(s.date) >= now; });
+    upcoming.sort(function(a,b){ return new Date(a.date) - new Date(b.date); });
+    // if fewer than 4 upcoming, backfill with the most recent past ones so the section isn't sparse
+    if(upcoming.length < 4){
+      const past = sessionsCache.filter(function(s){ return new Date(s.date) < now; })
+        .sort(function(a,b){ return new Date(b.date) - new Date(a.date); });
+      upcoming = upcoming.concat(past).slice(0, 4);
+    }else{
+      upcoming = upcoming.slice(0, 4);
+    }
+
+    if(upcoming.length === 0){
+      wrap.innerHTML = '<p style="color:var(--muted);font-family:var(--font-mono);font-size:.85rem;">No sessions scheduled right now.</p>';
+    }else{
+      const rows = upcoming.map(function(s, i){
+        const side = i % 2 === 0 ? 'left' : 'right';
+        const other = side === 'left' ? 'right' : 'left';
+        return '' +
+          '<div class="timeline-row">' +
+            (side === 'left' ? cardHtml(s, 'left', i===0) : '<div class="t-card ' + other + '" style="visibility:hidden;grid-column:1;"></div>') +
+            '<div class="t-node"><span class="t-dot' + (i === 0 ? ' filled' : '') + '"></span></div>' +
+            (side === 'right' ? cardHtml(s, 'right', i===0) : '<div class="t-card ' + other + '" style="visibility:hidden;grid-column:3;"></div>') +
+          '</div>';
+      }).join('');
+      wrap.innerHTML = '<div class="rail"><div class="rail-line"></div></div>' + rows;
+    }
+  }catch(err){
+    sessionsCache = [];
+    wrap.innerHTML = '<p style="color:var(--muted);font-family:var(--font-mono);font-size:.85rem;">Couldn\'t load sessions right now.</p>';
+  }
+  updateStatusConsole();
+
+  function cardHtml(s, side){
+    return '' +
+      '<div class="t-card bracket ' + side + '">' +
+        '<div class="t-id"><span>' + esc(s.id) + '</span><span class="date">' + esc(s.date) + '</span></div>' +
+        '<h3>' + esc(s.title) + '</h3>' +
+        '<div class="t-detail-row">' +
+          '<span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M8 3v4M16 3v4M3 10h18"/></svg> ' + fmtDate(s.date) + '</span>' +
+          '<span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> ' + esc(s.time) + '</span>' +
+          '<span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg> ' + esc(s.where) + '</span>' +
+        '</div>' +
+        (s.description ? '<div class="t-desc">' + esc(s.description) + '</div>' : '') +
+        '<div class="t-footer-row">' +
+          '<span class="t-tag-pill">' + esc(s.tag) + '</span>' +
+          (s.registerUrl ? '<a class="btn btn-outline small" href="' + esc(s.registerUrl) + '" target="_blank" rel="noopener">Register <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M7 17 17 7M9 7h8v8"/></svg></a>' : '') +
+        '</div>' +
+      '</div>';
+  }
+}
+
+/* ============================================================
+   STATUS CONSOLE — Latest Podcast from episodes.json,
+   Next Session = the chronos.json entry closest to today.
+   ============================================================ */
+function updateStatusConsole(){
+  const epTitle = document.getElementById('console-ep-title');
+  const epMeta = document.getElementById('console-ep-meta');
+  const sTitle = document.getElementById('console-session-title');
+  const sMeta = document.getElementById('console-session-meta');
+
+  if(episodesCache !== null){
+    if(episodesCache.length){
+      epTitle.textContent = episodesCache[0].title || '';
+      epMeta.textContent = fmtDate(episodesCache[0].published);
+    }else{
+      epTitle.textContent = 'No episodes indexed yet';
+      epMeta.textContent = '';
+    }
+  }
+
+  if(sessionsCache !== null){
+    if(sessionsCache.length){
+      const now = new Date();
+      const upcoming = sessionsCache.filter(function(s){ return new Date(s.date) >= now; })
+        .sort(function(a,b){ return new Date(a.date) - new Date(b.date); });
+      const closest = upcoming.length ? upcoming[0] : sessionsCache.slice().sort(function(a,b){ return new Date(b.date) - new Date(a.date); })[0];
+      sTitle.textContent = closest.title || '';
+      sMeta.textContent = fmtDate(closest.date) + (closest.time ? ' · ' + closest.time : '');
+    }else{
+      sTitle.textContent = 'No sessions scheduled';
+      sMeta.textContent = '';
+    }
+  }
+}
+
+loadEpisodes();
+loadLibrary();
+loadChronos();
+
+/* ============================================================
+   CONTACT FORM — static hosting has no backend, so this opens
+   the visitor's email client with the message pre-filled.
+   Swap this for a Formspree/Netlify-forms endpoint if you want
+   messages to land directly in an inbox without the client step.
+   ============================================================ */
+document.getElementById('contact-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('cf-name').value.trim();
+  const email = document.getElementById('cf-email').value.trim();
+  const message = document.getElementById('cf-message').value.trim();
+  const subject = encodeURIComponent('New message from ' + name + ' via frankenorg.com');
+  const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+  window.location.href = 'mailto:podcast@frankenorg.com?subject=' + subject + '&body=' + body;
+});
 </script>
 </body>
 </html>

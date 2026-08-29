@@ -1,0 +1,68 @@
+[
+  {
+    "id": "composing-salesforce-assembly-pattern",
+    "type": "post",
+    "tag": "Architecture",
+    "date": "2026-08-10",
+    "readTime": "8 min read",
+    "title": "Composing Salesforce: The Assembly Pattern",
+    "excerpt": "How to compose modular Salesforce orgs from disparate parts — without the monster turning on you.",
+    "url": "articles/composing-salesforce-assembly-pattern.html",
+    "thumbnail": ""
+  },
+  {
+    "id": "architects-walkthrough-data-modeling",
+    "type": "video",
+    "tag": "Deep Dive",
+    "date": "2026-08-06",
+    "readTime": "48:21",
+    "title": "Architect's Walkthrough: Data Modeling at Scale",
+    "excerpt": "",
+    "url": "https://www.youtube.com/playlist?list=PLMADD-VEXGwY",
+    "thumbnail": ""
+  },
+  {
+    "id": "org-blueprint-multi-cloud-scale",
+    "type": "post",
+    "tag": "Design",
+    "date": "2026-07-29",
+    "readTime": "12 min read",
+    "title": "Org Blueprint: Designing for Multi-Cloud Scale",
+    "excerpt": "A blueprint for architects planning org structures that survive the weight of multi-cloud demand.",
+    "url": "articles/org-blueprint-multi-cloud-scale.html",
+    "thumbnail": ""
+  },
+  {
+    "id": "live-build-integration-patterns",
+    "type": "video",
+    "tag": "Live Build",
+    "date": "2026-07-22",
+    "readTime": "45:03",
+    "title": "Live Build: Integration Patterns in 45 Minutes",
+    "excerpt": "",
+    "url": "https://www.youtube.com/playlist?list=PLMADD-VEXGwY",
+    "thumbnail": ""
+  },
+  {
+    "id": "frankens-lab-stitching-lwc-apex-triggers",
+    "type": "post",
+    "tag": "Engineering",
+    "date": "2026-07-15",
+    "readTime": "6 min read",
+    "title": "Franken's Lab: Stitching LWC with Apex Triggers",
+    "excerpt": "A practical stitch between Lightning Web Components and Apex triggers — patterns that don't rot.",
+    "url": "articles/frankens-lab-stitching-lwc-apex-triggers.html",
+    "thumbnail": ""
+  },
+  {
+    "id": "code-review-core-repository",
+    "type": "video",
+    "tag": "Code Review",
+    "date": "2026-07-08",
+    "readTime": "32:10",
+    "title": "Code Review: The Franken Org Core Repository",
+    "excerpt": "",
+    "url": "https://www.youtube.com/playlist?list=PLMADD-VEXGwY",
+    "thumbnail": ""
+  }
+]

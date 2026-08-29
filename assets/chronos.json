@@ -1,0 +1,42 @@
+[
+  {
+    "id": "S-014",
+    "title": "Community Summit: Apex Design Patterns",
+    "date": "2026-09-24",
+    "time": "18:00 UTC",
+    "where": "Online · Zoom",
+    "tag": "Summit",
+    "description": "A live assembly where architects break down battle-tested Apex patterns for large-scale orgs. Q&A throughout.",
+    "registerUrl": "https://example.com/register/community-summit-apex-design-patterns"
+  },
+  {
+    "id": "S-015",
+    "title": "Office Hours: Integration Q&A",
+    "date": "2026-10-02",
+    "time": "17:00 UTC",
+    "where": "Online · Discord",
+    "tag": "Office Hours",
+    "description": "Bring your integration questions — REST, events, middleware, or the thing you're afraid to ask about.",
+    "registerUrl": "https://example.com/register/office-hours-integration-qa"
+  },
+  {
+    "id": "S-016",
+    "title": "Workshop: LWC Performance Tuning",
+    "date": "2026-10-18",
+    "time": "16:00 UTC",
+    "where": "Online · Stream",
+    "tag": "Workshop",
+    "description": "Hands-on session profiling and fixing slow Lightning Web Components in a real (monstrous) org.",
+    "registerUrl": "https://example.com/register/lwc-performance-tuning"
+  },
+  {
+    "id": "S-017",
+    "title": "Panel: Agentforce in Production",
+    "date": "2026-11-05",
+    "time": "18:00 UTC",
+    "where": "Online · Zoom",
+    "tag": "Panel",
+    "description": "Three architects compare notes on shipping Agentforce to real users — what broke, what held.",
+    "registerUrl": "https://example.com/register/agentforce-in-production"
+  }
+]

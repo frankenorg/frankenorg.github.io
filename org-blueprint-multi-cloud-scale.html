@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Org Blueprint: Designing for Multi-Cloud Scale · The Franken Org</title>
+  <meta name="description" content="A blueprint for architects planning org structures that survive the weight of multi-cloud demand.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="brand">
+      <img src="../assets/frankenorg-logo.png" alt="The Franken Org">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html#top"><span class="n">01</span> System Core</a></li>
+        <li><a href="../index.html#sync-engine"><span class="n">02</span> Sync Engine</a></li>
+        <li><a href="../index.html#library"><span class="n">03</span> Library</a></li>
+        <li><a href="../index.html#chronos"><span class="n">04</span> Chronos</a></li>
+        <li><a href="../index.html#contact"><span class="n">05</span> Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <a href="../about.html" class="about">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+        About
+      </a>
+      <a href="#" class="nav-source">VIEW SOURCE</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="article-header">
+      <a href="../index.html#library" class="back-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        Back to Library
+      </a>
+      <div class="article-meta-row">
+        <span class="tag">Design</span>
+        <span>2026-07-29</span>
+        <span>·</span>
+        <span>12 min read</span>
+      </div>
+      <h1>Org Blueprint: Designing for Multi-Cloud Scale</h1>
+      <p class="dek">A blueprint for architects planning org structures that survive the weight of multi-cloud demand.</p>
+    </div>
+
+    <article class="article-body">
+      <p>Multi-cloud used to mean "Sales Cloud plus a bit of Service Cloud." Now it often means Sales, Service,
+      Experience, and a couple of industry clouds, all reporting into the same org, all wanting to own the same
+      handful of core objects. The blueprint below is less about any one cloud's setup and more about the
+      decisions that keep the whole thing from collapsing into itself.</p>
+
+      <h2>Decide who owns the core objects — before the second cloud shows up</h2>
+      <p>Account, Contact, and Case get pulled in every direction the moment a second cloud enters the picture.
+      Pick one system of record per object early, in writing, and make every other cloud integrate against that
+      record rather than maintaining its own shadow copy.</p>
+
+      <h3>A short checklist before you turn on cloud number two</h3>
+      <ul>
+        <li>Which objects will both clouds want to write to, and who wins on conflict?</li>
+        <li>Does the new cloud need its own record types, or can it reuse existing ones?</li>
+        <li>What's the sharing model going to look like once a second set of profiles exists?</li>
+      </ul>
+
+      <h2>Plan for divergence, not just integration</h2>
+      <p>Clouds will drift apart in release cadence, in naming conventions, in how their admins think about
+      configuration. A blueprint that assumes permanent harmony will need rework within a year. One that plans
+      an explicit reconciliation point — a recurring architecture review, not just a one-time integration diagram —
+      tends to age much better.</p>
+
+      <p>None of this makes multi-cloud simple. It just makes the complexity a known, managed shape instead of an
+      accident you discover eighteen months in.</p>
+    </article>
+
+    <div class="article-footer-cta">
+      <a href="../index.html#library" class="btn btn-outline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        Back to Library
+      </a>
+      <a href="https://open.spotify.com/show/033VIwiH526O5xfmqSE515?si=af486339a3ea4901" target="_blank" rel="noopener" class="btn btn-fill">
+        Listen to the Podcast
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="../assets/frankenorg-logo.png" alt="The Franken Org">
+        </div>
+        <p class="tag">
+          It's funny because it's true — somewhere in every enterprise Salesforce org, there's a monster, built from
+          years of "temporary" fixes, three departed consultants, and one integration nobody dares touch.
+        </p>
+      </div>
+      <div class="footer-col">
+        <div class="h">/ Modules</div>
+        <ul>
+          <li><a href="../index.html#top">System Core</a></li>
+          <li><a href="../index.html#sync-engine">Sync Engine</a></li>
+          <li><a href="../index.html#library">Library</a></li>
+          <li><a href="../index.html#chronos">Chronos</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="h">/ Channels</div>
+        <ul>
+          <li><a href="https://www.youtube.com/playlist?list=PLMADD-VEXGwY" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://open.spotify.com/show/033VIwiH526O5xfmqSE515?si=af486339a3ea4901" target="_blank" rel="noopener">Spotify</a></li>
+          <li><a href="https://www.linkedin.com/company/frankenorg" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>// build · stitch · deploy</span>
+      <span>© 2026 The Franken Org</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--
+  ARTICLE TEMPLATE — The Franken Org
+  ====================================
+  HOW TO USE THIS FILE:
+  1. Duplicate this file into /articles/ and rename it to a URL-friendly
+     slug, e.g. /articles/my-new-post-title.html
+  2. Replace every [BRACKETED PLACEHOLDER] below with your real content.
+     Search for "[" to find them all quickly.
+  3. Write your article body inside the <div class="article-body"> block
+     using plain HTML: <h2>, <h3>, <p>, <ul>/<li>, <blockquote>, <img>,
+     <code>, <pre><code> for code blocks, etc. Examples of each are
+     already in there — delete what you don't need.
+  4. Add a matching entry to /assets/library.json so the card shows up
+     on the homepage Library grid:
+       {
+         "id": "my-new-post-title",
+         "type": "post",
+         "tag": "Architecture",              <- pick a short category label
+         "date": "2026-09-01",               <- YYYY-MM-DD
+         "readTime": "6 min read",
+         "title": "My New Post Title",
+         "excerpt": "One or two sentences shown on the card.",
+         "url": "articles/my-new-post-title.html",
+         "thumbnail": ""                      <- optional image path
+       }
+  5. Done — no build step, just push both files to GitHub.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[ARTICLE TITLE] · The Franken Org</title>
+  <meta name="description" content="[ONE-SENTENCE SUMMARY FOR SEARCH ENGINES AND SOCIAL PREVIEWS]">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="brand">
+      <img src="../assets/frankenorg-logo.png" alt="The Franken Org">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html#top"><span class="n">01</span> System Core</a></li>
+        <li><a href="../index.html#sync-engine"><span class="n">02</span> Sync Engine</a></li>
+        <li><a href="../index.html#library"><span class="n">03</span> Library</a></li>
+        <li><a href="../index.html#chronos"><span class="n">04</span> Chronos</a></li>
+        <li><a href="../index.html#contact"><span class="n">05</span> Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <a href="../about.html" class="about">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+        About
+      </a>
+      <a href="#" class="nav-source">VIEW SOURCE</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="article-header">
+      <a href="../index.html#library" class="back-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        Back to Library
+      </a>
+      <div class="article-meta-row">
+        <span class="tag">[CATEGORY TAG, e.g. Architecture]</span>
+        <span>[YYYY-MM-DD]</span>
+        <span>·</span>
+        <span>[READ TIME, e.g. 8 min read]</span>
+      </div>
+      <h1>[ARTICLE TITLE]</h1>
+      <p class="dek">[ONE- OR TWO-SENTENCE DECK/SUBHEAD SHOWN UNDER THE TITLE]</p>
+
+      <!-- Optional hero image — delete this whole <div> if you don't have one -->
+      <div class="article-hero-img">
+        <img src="../assets/library/[YOUR-IMAGE-FILENAME].jpg" alt="[DESCRIBE THE IMAGE]">
+      </div>
+    </div>
+
+    <article class="article-body">
+      <p>[OPENING PARAGRAPH — set up the problem or the hook.]</p>
+
+      <h2>[FIRST SECTION HEADING]</h2>
+      <p>[Body copy. Delete/duplicate elements below as needed for your article.]</p>
+
+      <blockquote>[Optional pull-quote or key takeaway.]</blockquote>
+
+      <h3>[SUBSECTION HEADING]</h3>
+      <ul>
+        <li>[Bullet point one]</li>
+        <li>[Bullet point two]</li>
+        <li>[Bullet point three]</li>
+      </ul>
+
+      <h2>[SECOND SECTION HEADING]</h2>
+      <p>[More body copy. Use <code>inline code</code> like this for field/object API names.]</p>
+
+      <pre><code>// Example code block
+trigger AccountTrigger on Account (before insert) {
+  // [your code here]
+}</code></pre>
+
+      <p>[Closing paragraph / wrap-up.]</p>
+    </article>
+
+    <div class="article-footer-cta">
+      <a href="../index.html#library" class="btn btn-outline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        Back to Library
+      </a>
+      <a href="https://open.spotify.com/show/033VIwiH526O5xfmqSE515?si=af486339a3ea4901" target="_blank" rel="noopener" class="btn btn-fill">
+        Listen to the Podcast
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="../assets/frankenorg-logo.png" alt="The Franken Org">
+        </div>
+        <p class="tag">
+          It's funny because it's true — somewhere in every enterprise Salesforce org, there's a monster, built from
+          years of "temporary" fixes, three departed consultants, and one integration nobody dares touch.
+        </p>
+      </div>
+      <div class="footer-col">
+        <div class="h">/ Modules</div>
+        <ul>
+          <li><a href="../index.html#top">System Core</a></li>
+          <li><a href="../index.html#sync-engine">Sync Engine</a></li>
+          <li><a href="../index.html#library">Library</a></li>
+          <li><a href="../index.html#chronos">Chronos</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="h">/ Channels</div>
+        <ul>
+          <li><a href="https://www.youtube.com/playlist?list=PLMADD-VEXGwY" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://open.spotify.com/show/033VIwiH526O5xfmqSE515?si=af486339a3ea4901" target="_blank" rel="noopener">Spotify</a></li>
+          <li><a href="https://www.linkedin.com/company/frankenorg" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>// build · stitch · deploy</span>
+      <span>© 2026 The Franken Org</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

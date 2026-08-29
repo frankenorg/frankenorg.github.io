@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Your Name Here",
+    "role": "Host & Principal Architect",
+    "bio": "Replace this with a couple of sentences — years in the ecosystem, what you focus on, and what dragged you into podcasting about legacy orgs.",
+    "photo": "",
+    "linkedin": "https://www.linkedin.com/in/your-handle",
+    "x": ""
+  },
+  {
+    "name": "Co-Host Name Here",
+    "role": "Co-Host & Technical Architect",
+    "bio": "Replace this with their bio — background, specialties, and a sentence of personality.",
+    "photo": "",
+    "linkedin": "https://www.linkedin.com/in/co-host-handle",
+    "x": "https://x.com/co_host_handle"
+  }
+]
