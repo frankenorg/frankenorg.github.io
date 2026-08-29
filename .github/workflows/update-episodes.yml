@@ -2,8 +2,8 @@ name: Update podcast episodes
 
 on:
   schedule:
-    # every 6 hours
-    - cron: "0 */6 * * *"
+    # every 24 hours
+    - cron: "0 18 * * *"
   workflow_dispatch: {}
   push:
     branches: [main]
