@@ -1,18 +1,18 @@
 [
   {
-    "name": "Your Name Here",
+    "name": "Misbah ul Iman",
     "role": "Host & Principal Architect",
-    "bio": "Replace this with a couple of sentences — years in the ecosystem, what you focus on, and what dragged you into podcasting about legacy orgs.",
+    "bio": "alesforce Technical Architect with 20+ years of enterprise experience, 10-year Salesforce Community Group Leader, and Co-Organizer of Dubai Dreamin’. Host of The Franken Org podcast—a platform created after seeing too many Frankenstein-like orgs struggling to innovate. Dedicated to helping teams clean up legacy technical debt and refactor messy architectures so they can safely deploy next-generation solutions like Agentforce.",
     "photo": "",
-    "linkedin": "https://www.linkedin.com/in/your-handle",
-    "x": ""
+    "linkedin": "https://www.linkedin.com/in/dumbcode",
+    "x": "https://x.com/dumbcode"
   },
   {
-    "name": "Co-Host Name Here",
+    "name": "Frankie (The Frankenstein)",
     "role": "Co-Host & Technical Architect",
-    "bio": "Replace this with their bio — background, specialties, and a sentence of personality.",
+    "bio": "Frankie is a seasoned Salesforce technical expert and co-host of The Franken Org. Operating anonymously to share raw, unfiltered truths about enterprise technical debt, Frankie keeps his personal identity off the grid, a decision we completely respect. He brings decades of hands-on experience refactoring monster orgs and preparing complex architectures for next-gen AI.",
     "photo": "",
-    "linkedin": "https://www.linkedin.com/in/co-host-handle",
-    "x": "https://x.com/co_host_handle"
+    "linkedin": "https://www.linkedin.com/",
+    "x": "https://x.com/"
   }
 ]
