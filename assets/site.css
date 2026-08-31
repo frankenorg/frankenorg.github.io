@@ -153,13 +153,14 @@
     border-bottom:1px solid var(--border-soft);
   }
   .nav-inner{
-    display:flex;
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
     align-items:center;
-    justify-content:space-between;
     padding:1rem clamp(20px, 4vw, 48px);
     gap:1.5rem;
   }
   .brand{
+    justify-self:start;
     display:flex;
     align-items:center;
     gap:.7rem;
@@ -167,6 +168,7 @@
     font-size:1.02rem;
   }
   .brand img{height:26px;width:auto;}
+  header.nav > .nav-inner > nav{justify-self:start;}
   .nav-links{
     display:flex;
     align-items:center;
@@ -189,29 +191,13 @@
     color:var(--lime);
     font-size:.72rem;
   }
-  .nav-right{display:flex;align-items:center;gap:1.4rem;}
-  .nav-right .about{
-    display:flex;align-items:center;gap:.4rem;
-    font-size:.9rem;color:var(--body);
-  }
-  .nav-right .about:hover{color:var(--white);}
-  .nav-source{
-    font-family:var(--font-mono);
-    font-size:.72rem;
-    letter-spacing:.05em;
-    padding:.55rem .9rem;
-    border:1px solid var(--border);
-    color:var(--lime);
-  }
-  .nav-source:hover{border-color:var(--lime);}
   .nav-toggle{display:none;}
   @media(max-width:920px){
     .nav-links{display:none;}
-    .nav-right .about{display:none;}
   }
 
   /* ================= HERO ================= */
-  .hero{padding:clamp(64px,10vw,108px) 0 0;}
+  .hero{padding-top:clamp(64px,10vw,108px);}
   .hero h1{
     font-size:clamp(2.4rem, 6.4vw, 4.6rem);
     line-height:1.04;
@@ -220,7 +206,7 @@
   .hero h1 .accent{color:var(--lime);}
   .hero p.lede{
     margin-top:1.6rem;
-    max-width:56ch;
+    max-width:100%;
     color:var(--body);
     font-size:1.06rem;
     line-height:1.75;
@@ -496,12 +482,14 @@
   /* ================= CONTACT ================= */
   .contact-grid{
     display:grid;
-    grid-template-columns:.85fr 1.15fr;
+    grid-template-columns:1fr 1fr;
     gap:1.1rem;
-    align-items:start;
+    align-items:stretch;
   }
   @media(max-width:840px){ .contact-grid{grid-template-columns:1fr;} }
   .contact-left{display:flex;flex-direction:column;gap:1.1rem;}
+  .contact-right{display:flex;flex-direction:column;}
+  .channels-card{flex:1;}
   .info-card{padding:1.2rem 1.3rem;}
   .info-card .label{
     font-family:var(--font-mono);
