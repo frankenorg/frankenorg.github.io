@@ -1,5 +1,13 @@
 [
   {
+    "videoId": "1UZKyAcTLdc",
+    "title": "Trust Layer: The Bouncer at the AI Nightclub",
+    "url": "https://www.youtube.com/watch?v=1UZKyAcTLdc",
+    "published": "2026-09-01T16:53:28+00:00",
+    "thumbnail": "https://i2.ytimg.com/vi/1UZKyAcTLdc/hqdefault.jpg",
+    "description": "Grounding. Data masking. Toxicity detection. Zero data retention. Audit logging. The Trust Layer isn't one feature, it's five specialists standing guard at five different checkpoin"
+  },
+  {
     "videoId": "LVvb2DE_zbw",
     "title": "Why Your Subagents Are a Confusing Mess (And How to Fix Them)",
     "url": "https://www.youtube.com/watch?v=LVvb2DE_zbw",
@@ -38,13 +46,5 @@
     "published": "2026-08-22T17:20:26+00:00",
     "thumbnail": "https://i4.ytimg.com/vi/k12MLobRyD0/hqdefault.jpg",
     "description": "Frankie needs to hide some very sensitive evidence from prying eyes in a lower sandbox environment. Enter Salesforce Shield and Data Mask two tools that get confused constantly, an"
-  },
-  {
-    "videoId": "3afZBMiJMhs",
-    "title": "Frankie's Physical: The Annual Security Health Check",
-    "url": "https://www.youtube.com/watch?v=3afZBMiJMhs",
-    "published": "2026-08-21T05:45:18+00:00",
-    "thumbnail": "https://i4.ytimg.com/vi/3afZBMiJMhs/hqdefault.jpg",
-    "description": "Frankie gets dragged, kicking and screaming, into his annual physical, except it's not a stethoscope, it's Salesforce's Security Health Check, and the results are... not great. Thi"
   }
 ]
